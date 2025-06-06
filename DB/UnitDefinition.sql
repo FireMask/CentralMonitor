@@ -1,0 +1,20 @@
+CREATE DATABASE Unit001
+GO
+
+CREATE TABLE Sale (
+	Id INT PRIMARY KEY IDENTITY NOT NULL
+	Amount DECIMAL(20, 4) NULL
+	SaleDate DATETIME NULL
+)
+GO
+
+CREATE PROCEDURE [dbo].[spGetTotalSalesByDate](
+	@BeginDate DATETIME,
+	@EndDate DATETIME
+) AS
+BEGIN
+	SELECT SUM(Amount) TotalAmount
+	FROM dbo.Sale
+	WHERE SaleDate BETWEEN @BeginDate AND @EndDate
+END
+GO

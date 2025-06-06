@@ -1,0 +1,71 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.top-navbar {
+  height: 64px;
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+
+  .site-title {
+    font-size: 1.5rem;
+    margin-left: 12px;
+    font-weight: 500;
+  }
+}
+
+.mat-nav-list a.mat-list-item {
+  mat-icon {
+    margin-right: 12px;
+  }
+}
+
+.layout {
+  display: flex;
+  flex-grow: 1;
+  height: calc(100% - 64px);
+}
+
+.sidenav-container {
+  flex-grow: 1;
+  height: 100%;
+}
+
+.mat-sidenav {
+  width: 240px;
+  background-color: #ffffff;
+}
+
+.main-container {
+  padding: 24px;
+  background-color: #f9fafb;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.page-title {
+  font-size: 1.8rem;
+  margin-bottom: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.chart-card {
+  padding: 16px;
+  background: white;
+
+  .chart-placeholder {
+    height: 300px;
+    border: 2px dashed #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #777;
+    font-size: 1.2rem;
+  }
+}
